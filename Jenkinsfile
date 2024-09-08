@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         jdk 'jdk17'
-        nodejs 'node16'
+        nodejs 'Node16'
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
@@ -36,7 +36,7 @@ pipeline {
         stage("Quality Gate") {
             steps {
                 script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token'
                 }
             }
         }
