@@ -5,7 +5,7 @@ pipeline {
         nodejs 'Node16'
     }
     environment {
-        SCANNER_HOME = tool 'Sonar-scanner'
+        SCANNER_HOME = tool 'Sonar-Scanner'
         APP_NAME = "reddit-clone-pipeline"
         RELEASE = "1.0.0"
         DOCKER_USER = "aarizsak"
